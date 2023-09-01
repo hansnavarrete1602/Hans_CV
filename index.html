@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- normalize es para normalizar el css para cualquier navegador -->
+    <link rel="preload" href="CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="CSS/normalize.css"> <!-- coment -->
+    <!-- fonts de google para css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- preload es para cargar mas rapido -->
+    <link rel="preload" href="CSS/styles.css" as="style">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Diseñador Freelancer</title>
+</head>
+<body>
+    <header>
+        <!-- h1 tiene mas importancia, despues sigue h2, h3 hasta h6 -->
+        <!-- h1 se utiliza para los titulos mas grandes o importantes -->
+        <!-- se debe de utilizar solo un h1 por archivo html -->
+        <h1 class="titulo">Hans Navarrete <span>Freelancer</span></h1>
+    </header>
+
+    <!-- div es para agrupar -->
+    <div class="nav-bg">
+        <!-- nav es para crear una barra de navegacion -->
+        <nav class="navegacion-principal contenedor">
+            <!-- dentro de href se declara hacia donde ir ej: nosotros.html-->
+            <a href="#"> Inicio</a>
+            <a href="about.html"> Sobre Mi</a>
+            <!-- <a href="#"> Clientes</a>
+            <a href="#"> Contactos</a> -->
+        </nav>
+    </div>
+
+    <!-- Si el primer elemento es un heading (h1, h2,..) se utiliza un section -->
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2>Especialista de Desarrollo</h2>
+            <!-- si se quiere utilizar imagenes locales se usa <img src=" nombre "> -->
+            <!-- se puede utilizar tabler icons para imagenes en linea-->
+
+            <!-- p se utiliza para parrafo y es generico -->
+            <!--
+            manera sencilla de centrar imagen y texto en la misma linea
+            <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+            </svg>
+                Bogota, Colombia</p> -->
+            <!-- manera flex de centrar imagen y texto -->
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <p>
+                    Bogota, Colombia
+                </p>
+            </div>
+
+            <a class="boton" href="#contact"> Contactar</a>
+        </div>
+    </section>
+
+    <!-- Dentro del main va el contenido principal de la pagina -->
+    <main class="contenedor sombra">
+        <h2>Mis Servicios</h2>
+        <div class="servicios">
+            <section class="servicio">
+                <h3>Diseño Web</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                        <circle cx="7.5" cy="10.5" r=".5" fill="currentColor" />
+                        <circle cx="12" cy="7.5" r=".5" fill="currentColor" />
+                        <circle cx="16.5" cy="10.5" r=".5" fill="currentColor" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code-dots" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M15 12h.01" />
+                        <path d="M12 12h.01" />
+                        <path d="M9 12h.01" />
+                        <path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2" />
+                        <path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2" />
+                    </svg>
+                </div>
+                <!-- para Lorem ipsum -> lipsum.com -->
+                <!-- dentro de p -> lorem + tab -> agrega automaticamente texto -->
+                <p>Diseño de páginas web Front-end.
+                    Competencias en HTML, CSS, Bootstrap, Responsive Design y Media Query.
+                    Excelentes habilidades de gestión y comunicación con equipos de trabajo.</p>
+            </section>
+            <section class="servicio">
+                <h3>Análisis de datos masivos con Python</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-analytics" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                        <path d="M9 17l0 -5" />
+                        <path d="M12 17l0 -1" />
+                        <path d="M15 17l0 -3" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-report" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M17 17m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                        <path d="M17 13v4h4" />
+                        <path d="M12 3v4a1 1 0 0 0 1 1h4" />
+                        <path d="M11.5 21h-6.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v2m0 3v4" />
+                    </svg>
+                </div>
+                <p>Análisis de datos masivos haciendo uso de la herramienta Pandas.
+                    Generación de gráficos automatizados de datos masivos con MatplotLib.
+                    Automatización de reportes gerenciales.</p>
+            </section>
+        </div> <!-- division de 3 secciones -->
+        <div class="servicios">
+            <section class="servicio">
+                <h3>Automatización de procesos ofimáticos e industriales con Python</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coins" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3z" />
+                        <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4" />
+                        <path d="M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598z" />
+                        <path d="M3 6v10c0 .888 .772 1.45 2 2" />
+                        <path d="M3 11c0 .888 .772 1.45 2 2" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sql" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 8a2 2 0 0 1 2 2v4a2 2 0 1 1 -4 0v-4a2 2 0 0 1 2 -2z" />
+                        <path d="M17 8v8h4" />
+                        <path d="M13 15l1 1" />
+                        <path d="M3 15a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1" />
+                    </svg>
+                </div>
+                <p>Diseño e implementación de software específico para realizar tareas automáticas con SQL Server y PHP.
+                    Automatización y mejora de procesos SAP.</p>
+            </section>
+            <section class="servicio">
+                <h3>Domótica y eficiencia energética</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-dot" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 12h2l-9 -9l-9 9h2v7a2 2 0 0 0 2 2h5" />
+                        <path d="M19 19m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2c.641 0 1.212 .302 1.578 .771" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M12 5l0 .01" />
+                        <path d="M17 7l0 .01" />
+                        <path d="M19 12l0 .01" />
+                        <path d="M17 17l0 .01" />
+                        <path d="M12 19l0 .01" />
+                        <path d="M7 17l0 .01" />
+                        <path d="M5 12l0 .01" />
+                        <path d="M7 7l0 .01" />
+                    </svg>
+                </div>
+                <p>Diseño e implementación de dispositivos electrónicos inteligentes para la automatización de tareas básicas en el hogar y en espacios de trabajo.
+                    Análisis, Diseño e implementación de dispositivos energéticos que trabajan con energía renovable para la eficiencia de consumo energético.
+                    Construcción e implementación de estaciones de monitoreo de diversos factores climáticos o naturales.</p>
+            </section>
+        </div><!-- division de 2 secciones -->
+
+        <section id="contact">
+            <h2>Contacto</h2>
+
+            <!-- form es para hacer un formulario -->
+            <form class="formulario" action="mailto:hansnav@outlook.com" method="post" enctype="text/plain">
+                <!-- fieldset se utiliza para crear una base -->
+                <fieldset>
+                    <legend>Contactame llenando todos los campos con *</legend>
+
+                    <div class="contenedor-campos">
+
+                        <div class="campo">
+                            <!-- label es una etiqueta -->
+                            <label>Nombre*</label>
+                            <!-- input es para escribir texto -->
+                            <!-- type: text->default checkbox->habilitar radio->circulo
+                            tel->facilita numeros email->especial para correos
+                            number->habilita solo numeros -->
+                            <input class="input-text" type="text" placeholder="Tu Nombre Completo">
+                        </div>
+
+                        <div class="campo">
+                            <label>Teléfono*</label>
+                            <input class="input-text" type="tel" placeholder="Tu Numero de Contacto">
+                        </div>
+
+                        <div class="campo">
+                            <label>Correo*</label>
+                            <input class="input-text" type="email" placeholder="Tu Correo de Contacto">
+                        </div>
+
+                        <div class="campo">
+                            <label>Mensaje (opcional)</label>
+                            <!-- textarea es para escribir arto texto -->
+                            <textarea class="input-text"></textarea>
+                        </div>
+                    </div> <!-- contenedor campos -->
+
+                    <div class="alinear-derecha flex">
+                        <!-- submit es como un boton -->
+                        <input class="boton w-100" type="submit" value="Enviar">
+                    </div>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados. Ingeniero Hans Navarrete</p>
+    </footer>
+
+</body>
+</html>

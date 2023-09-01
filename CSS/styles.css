@@ -1,0 +1,482 @@
+/*
+Estructura para escribir CSS
+BEM -> bloques, elementos, modificadores -> .card{} .card__titulo{} .card__titulo--activo{}
+Utility First -> crea clase con una sola propiedad -> .text-center{} .bg-blue-200{}-> se usa cuando solo hay una propiedad
+Modulos -> define contenido y selecciona ordenadamente -> .card{} .card h2{} -> en el proyecto se utiliza este
+*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* Custom properties */
+/* root es un pseudoelemento osea no existe*/
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: rgb(255,193,7);
+    --secundario: #0097A7;
+    --gris: #757575;
+    --fuente-principal: 3.8rem;
+}
+
+/* para colores :
+hex -> #000, #000000
+rgb -> rgba=transparenica -> rgba(255,193,7,1);
+hsl -> hsla=transparencia -> hsla(255,193,7,1);
+nombre -> blue,etc...
+*/
+
+/* ......................................*/
+/* Para usar rem */
+html{
+    font-size: 62.5%; /* hack para usar rem*/
+    box-sizing: border-box; /* hack para ajustar los contenedores de css */
+    scroll-snap-type: y mandatory; /* scroll inteligente en el eje y*/
+}
+
+/* scroll snap */
+.titulo,
+.navegacion-principal,
+.servicios,
+.contenedor,
+.formulario,
+.footer{
+    /* de este modo se limita a ue se vaya de una vez a esta seccion y se detenga ahi de forma inteligente*/
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Para ajustar los contenedores */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Noto Sans', sans-serif; /* desde google fonts*/
+    background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100%); /* hacer degradado de color*/
+    /* tambien se puede usar css matic para hacer un degradado*/
+}
+.wcolum{
+    column-count:4;
+    column-gap: 2em;
+    column-rule: 2.5px solid #bbb;
+    column-width: 100px;
+}
+.titulo2 {
+    column-span:all;
+}
+
+.sim {
+    display:block;
+    column-span:all;
+}
+/* ......................................*/
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+.titulo{
+    text-align: center;
+    font-size: var(--fuente-principal);
+}
+.titulo span{
+    font-size: 2rem;
+}
+.contenedor{
+    max-width: 120rem;
+    max-height: fit-content;
+    /*
+    posicion o espacio alrededor del elemento
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom:0;
+    margin-left: auto;
+    */
+    margin: 0 auto 2rem auto;
+}
+/* se hace una sombra con css matic para el cuadro del main*/
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
+    box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    /*padding: 1rem 3rem 1rem 3rem; como se repiten es mejor asi*/
+    padding: 1rem 3rem; /* sirve para ampliar el espacio interno del boton */
+    margin-top: 1rem; /* sirve para darle espacio con el elemento de arriba */
+    font-size: 2rem;
+    text-decoration: none; /* le quita la linea de abajo de enlace */
+    text-transform: uppercase; /* pone en mayuscula el texto */
+    font-weight: bold; /* lo pone en estilo negrita */
+    border-radius: .5rem; /* esquinas redondeadas */
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    /* dislay -> block o inline, block=uno debajo del otro, inline= a la derecha*/
+    /* display: inline; horizontal , block; vertical*/
+    display: flex; /* se utiliza flex para distribuir los elementos*/
+    /*flex-direction: column;
+    align-items: center;*/ /* distribuye vertical */
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        /*justify-content: space-between; -> distribuye horizontal*/
+        justify-content: space-evenly;
+    }
+}
+
+.navegacion-principal a{
+    /* padding = espacio dentro del elemento */
+    padding: 1rem;/*1rem 1rem 1rem 1rem*/
+    color: var(--blanco);
+    text-decoration: none; /* elimina linea del link */
+    font-size: 2rem;
+    font-weight: bold; /* font weight establecido en la fuente */
+}
+.navegacion-principal a:hover{ /* hover es una propiedad de a*/
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-100 {
+        width: auto;
+    }
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+.Circular{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: none;
+    padding: 1rem;
+}
+
+@media (min-width: 772px) {
+    .Circular {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+.hero {
+    background-image: url(../img/analisis.jpg);
+    background-repeat: no-repeat; /* que no se repita la imagen */
+    background-size: cover; /* este en el espacio completo*/
+    height: 400px;
+    position: relative; /* el padre siempre debe ser relativo para que el hijo sea absoluto*/
+    margin-bottom: 2rem;
+}
+.contenido-hero {
+    position: absolute; /* hijo, el que voy a posicionar */
+    /*background-color: rgba(0,0,0,.6);*/ /* Forma antigua */
+    background-color: rgb( 0 0 0 / 70% ); /* Forma moderna */
+    width: 100%; /* remplaza left right*/
+    height: 100%; /* remplaza top bottom */
+    /*
+    Se utilizan para cubrir toda el area
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    */
+    display: flex; /* se usa para posicionar los elementos, es como una habilitación*/
+    flex-direction: column; /* hacia abajo */
+    align-items: center; /* alinea el contenido verticalmente */
+    justify-content: center; /* alinea el contenido horizontalmente */
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.contenido-hero .ubicacion{
+    /* alineacion vertical */
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid; /* grid permite ajustar la ubicacion y tamaño de los elementos se agrupa en un espacio definido, se tiene acceso a las dos dimensiones*/
+        /* flex cambia el tamaño a medida que cambia el espacio automaticamente aca solo se tiene acceso a una dimension, row o column*/
+        /*grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px;*/ /* es para poner columnas y filas*/
+        /*grid: 200px 800px / 300px 300px; */ /* lo mismo que arriba, primero row y luego column*/
+        /*grid-template-columns: 1fr 1fr 1fr;*/ /* 1fr significa una fraccion del espacio y elementos */
+        grid-template-columns: repeat(2,1fr); /* lo mismo de arriba*/
+        column-gap: 1rem; /* Separacion entre columnas*/
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos{
+    height: 12rem;
+    width: 12rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* utiliza el valor mas pequeña de 60 rem o 100% reemplaza un media query*/
+    margin: 0 auto; /* se utiliza para centrar un elemento que no tiene un padre con un display flex sino con un display block */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none; /* borra el borde del formulario*/
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+    display: block;
+}
+
+.contenedor-campos{
+
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea{
+    height: 20rem;
+}
+/* de este modo se camsia solo un elemento
+.campo input[type="text"]{
+    background-color: red;
+}*/
+.input-text{
+    width: 100%; /* toma el espacio disponible */
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+/*************************CARD***************/
+.contenedor-cards{
+    /*display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    /*-webkit-box-shadow: 0px 10px 10px 10px rgba(66,66,66,0.47);
+    -moz-box-shadow: 0px 10px 10px 10px rgba(66,66,66,0.47);
+    box-shadow: 0px 10px 10px 10px rgba(66,66,66,0.47);*/
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    -webkit-box-shadow: 0px 5px 5px 5px rgba(66,66,66,0.47);
+    -moz-box-shadow: 0px 5px 5px 5px rgba(66,66,66,0.47);
+    box-shadow: 0px 5px 5px 5px rgba(66,66,66,0.47);
+    border-radius: 5px;
+    background-color: var(--secundario);
+    width: 250px;
+    height: 520px;
+    margin: 2rem;
+}
+.card:hover{
+    -webkit-box-shadow: 10px 10px 10px 10px rgba(66,66,66,0.47);
+    -moz-box-shadow: 10px 10px 10px 10px rgba(66,66,66,0.47);
+    box-shadow: 10px 10px 10px 10px rgba(66,66,66,0.47);
+}
+.card img{
+    border-radius: 5px 5px 0 0;
+    padding: .2rem;
+}
+.contenedor-card{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor-card h4{
+    font-family: 'Righteous', sans-serif;
+    color: rgb(46 40 40 / 90%);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    text-align: center;
+}
+.contenedor-card p{
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    font-size: 0.8rem;
+    line-height: 150%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/****************************************************************/
+
+/*********************SKILL**************************************/
+
+@media (min-width: 768px) {
+    .column-skill{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem;
+        justify-items: center;
+        padding: 10px;
+    }
+}
+
+.skill-card{
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+}
+.skill-header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.skill-body{
+    padding: 20px;
+}
+.skill{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.skill-name{
+    width: 120px;
+    font-size: 16px;
+}
+.skill-level{
+    width: 160px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.skill-percent{
+    background-color: #333;
+    height: 100%;
+}
+.skill-percent-number{
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+/****************************************************************/
+
+.footer{
+    text-align: center;
+}
+
+/* Forma de alargar el boton al 100% del espacio
+.enviar .boton{
+    width: 100%; omite el 90% de boton y se aplica solo a enviar
+}*/
+
+/* Responsive web design -> que se vea bien en todas las pantallas */
+/* se hace el responsive con media queries */
+/* cuando se llega a la condicion se realiza el codigo */
+/* ctrl+shift+a -> save as live script -> crea una plantilla */
+/*
+@media (min-width: 480px) { celulares
+    body{
+    }
+}
+@media (min-width: 768px) { tablets
+    body{
+    }
+}
+@media (min-width: 992px) { computadores viejos
+    body{
+    }
+}
+@media (min-width: 1140px) { computadores nuevos
+    body{
+    }
+}
+@media (min-width: 1400px) { tv
+    body{
+    }
+}
+*/
+
+
