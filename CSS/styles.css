@@ -18,9 +18,9 @@ html{
 
 .titulo,
 #service,
-#jobs,
 #skills,
-#me,
+#jobs,
+#about,
 #contact,
 .footer{
     scroll-snap-align: start;
@@ -46,13 +46,14 @@ body{
     column-count: 2;
     column-gap: 2rem;
     column-rule: 1px solid #bbb;
+    margin-top: 2.5rem;
 }
 
 .circular {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     display: block;
 }
 
@@ -62,12 +63,27 @@ p {
     color: #555;
     line-height: 1.6;
 }
+.wcolum p{
+    text-align: justify;
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: var(--blanco);
+}
 
 .titulo3 {
     text-align: center;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 2rem;
+    color: var(--primario);
     margin-top: 2rem;
+}
+.wcolum:hover {
+    p {
+        color: var(--oscuro);
+    }
+    .titulo3{
+        color: var(--secundario);
+        text-decoration-line: underline;
+    }
 }
 
 @media (max-width: 768px) {
@@ -108,12 +124,11 @@ h1,h2,h3 {
 .contenedor{
     max-width: 120rem;
     max-height: fit-content;
-    margin: 0 auto 0.5rem auto;
+    margin: 0 auto 2rem auto;
 }
 .sombra{
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
-    box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
+    -webkit-box-shadow: 0 4px 8px rgba(255,255,0,0.5);
+    box-shadow: 0 4px 8px rgba(255,255,0,0.5);
     background-color: var(--blanco);
     padding: 2rem;
     border-radius: 1rem;
@@ -123,55 +138,72 @@ h1,h2,h3 {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
     -moz-box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
     box-shadow: 0px 5px 15px 0px rgba(99,89,99,0.47);
+    background-color: var(--oscuro);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+#service, #jobs, #skills, #contact, #about{
     background-color: var(--secundario);
     padding: 2rem;
     border-radius: 1rem;
 }
-
+#service h2, #jobs h2, #skills h2, #contact h2, #about h2{
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#service:hover, #jobs:hover, #skills:hover, #contact:hover, #about:hover{
+    background-color: var(--primario);
+    h2 {
+        color: var(--oscuro);
+    }
+    .toggle-button {
+        background-color: var(--oscuro);
+        color: var(--blanco);
+    }
+}
 .boton{
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .5rem;
-    width: 100%;
+    width: 90%;
     text-align: center;
     border: none;
-}
-
-.nav-bg{
-    background-color: var(--secundario);
-}
-.navegacion-principal{
-    display: flex;
-    flex-direction: column;
 }
 
 @media (min-width: 768px) {
     .boton {
         width: auto;
     }
-    .navegacion-principal {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
 }
 
-.navegacion-principal a{
-    padding: 1rem;
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.navegacion-principal a:hover, .boton:hover{
+.boton:hover{
     background-color: var(--primario);
     color: var(--oscuro);
     cursor: pointer;
+}
+
+.toggle-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primario); /* Use the primary color variable for consistency */
+    color: var(--oscuro); /* White text for contrast */
+    padding: 10px 20px; /* Adequate padding for a button */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid var(--oscuro); /* Dark border for definition */
+    cursor: pointer; /* Change cursor to indicate clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.collapsible-content.collapsed {
+    display: none;
 }
 
 .w-100{
@@ -204,7 +236,7 @@ img{
 }
 .contenido-hero {
     position: absolute;
-    background-color: rgb( 0 0 0 / 70% );
+    background-color: rgb( 0 0 0 / 75% );
     width: 100%;
     height: 100%;
     display: flex;
@@ -219,7 +251,7 @@ img{
 
 .contenido-hero .ubicacion{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -244,8 +276,12 @@ img{
 }
 
 .servicio:hover {
+    background-color: var(--secundario);
+    h3, p{
+        color: var(--blanco);
+    }
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px var(--secundario);
+    box-shadow: 0 8px 16px var(--gris);
 }
 
 .servicio h3 {
@@ -300,12 +336,6 @@ img{
 
 
 /* Form Section */
-
-#contact h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 1rem;
-}
 
 .formulario {
     background-color: var(--gris);
@@ -363,21 +393,6 @@ img{
 
 .alinear-derecha {
     text-align: right;
-}
-
-.boton {
-    background-color: var(--secundario);
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.boton:hover {
-    background-color: var(--primario);
 }
 
 @media (max-width: 768px) {
@@ -495,6 +510,7 @@ img{
 
 /* Footer Styles */
 .footer {
+    margin-top: auto;
     background-color: #282828; /* Fondo oscuro */
     text-align: center;
     padding: 1rem 0; /* Espaciado superior e inferior */
@@ -533,10 +549,6 @@ img{
 }
 
 
-
-
-
-
 .portfolio {
     display: flex;
     overflow-x: scroll;
@@ -553,12 +565,15 @@ img{
     transition: 0.3s;
     border-radius: 10px;
     overflow: hidden;
-    cursor: pointer;
     background-color: #fff;
 }
 .trabajo:hover {
     box-shadow: 0 8px 16px 0 var(--secundario);
 }
+#jobs .trabajo{
+    cursor: pointer;
+}
+
 .image-container {
     width: 100%;
     height: 200px; /* Fijo tamaño para la imagen */
@@ -671,7 +686,7 @@ img{
 }
 
 .menu-float{
-    padding: 10px;
+    padding: 7px;
     background-color: transparent;
     position: fixed;
     bottom: 20px;
@@ -683,11 +698,11 @@ img{
 }
 
 .menu-float a{
-    color: #e91e63; /* Color de enlaces */
+    color: var(--primario); /* Color de enlaces #e91e63*/
     text-decoration: none; /* Sin subrayado */
-    margin: .1rem 0;
-    width: 5rem;
-    height: 5rem;
+    /*margin: .1rem 0;*/
+    width: 7rem;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -704,7 +719,7 @@ img{
 .opciones{
     display: none;
     position: absolute;
-    bottom: 70px; /* Asegura que el menú flotante esté encima del icono */
+    bottom: 80px; /* Asegura que el menú flotante esté encima del icono */
     right: 0;
     flex-direction: column;
     align-items: flex-end;
@@ -715,17 +730,17 @@ img{
 }
 
 .opcion{
-    margin: 10px 0;
+    margin: 5px 0;
     position: relative;
 }
 
 .opcion span{
     position: absolute;
-    right: calc(100% + 50px);
+    right: calc(100% + 10px);
     color: rgba(244, 215, 7, 0.91);
     padding: 10px 15px;
     border-radius: 10px;
-    width: 20rem;
+    width: 15rem;
     text-align: center;
     opacity: 0;
     display: none;
