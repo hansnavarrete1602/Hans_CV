@@ -329,73 +329,91 @@
                 <div class="portfolio">
                 <div class="trabajo" onclick="openModal('modal1')">
                     <div class="image-container">
-                        <img src="img/claro.jpg" alt="Trabajo 1">
+                        <img src="img/redumap.png" alt="Trabajo 1">
                     </div>
                     <div class="descripcion">
-                        <h4><b>Software de análisis de datos</b></h4>
-                        <p>Diseño de software de análisis y automatización con Python</p>
+                        <h4><b>Herramienta GeoVisor</b></h4>
+                        <p>Diseño e implementación de una herramienta web para fortalecer programas de reciclaje en instituciones educativas de Bogotá</p>
                     </div>
+                    <button class="ver-mas-btn">Click para ver más</button>
                 </div>
                 <!-- Modal para el Proyecto 1 -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal1')">&times;</span>
-                        <h2>Software de análisis de datos</h2>
+                        <h2>Herramienta Web GeoVisor</h2>
                         <div class="modal-body">
-                            <img src="img/claro.jpg" alt="Descripción de la imagen" class="modal-image">
-                            <p>AIDA Claro, es un software, diseñado en Python,<br/>
-                            para analizar documentos excel muy grandes,<br/>
-                            y generar reportes automáticos con gráficas
-                            de dichos datos.</p>
+                            <video controls class="modal-video" autoplay loop>
+                                <source src="img/Redumap.mp4" type="video/mp4">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                            <p>El geovisor se presenta como una herramienta para promover el reciclaje entre los estudiantes de instituciones educativas.
+                                <br/>
+                                Proporciona información georreferenciada sobre lugares de acopio y contribuye a la implementación de programas de reciclaje en escuelas y colegios.
+                                <br/>
+                                Esta herramienta se diseño mediante programación web y el uso de Postgresql como base de datos, y posteriormente se desplego usando el servidor Wampp.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="trabajo" onclick="openModal('modal2')">
                     <div class="image-container">
-                        <img src="img/alq.jpg" alt="Trabajo 2">
+                        <img src="img/pdfill.png" alt="Trabajo 2">
                     </div>
                     <div class="descripcion">
-                        <h4><b>APP móvil para recolección</b></h4>
-                        <p>Aplicación movil Android realizada con Flutter y Dart</p>
+                        <h4><b>Software para llenar formularios PDF</b></h4>
+                        <p>Software que automatiza el llenado de formularios PDF mediante una interfaz grafica realizada en python.</p>
                     </div>
+                    <button class="ver-mas-btn">Click para ver más</button>
                 </div>
                 <!-- Modal para el Proyecto 2 -->
                 <div id="modal2" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal2')">&times;</span>
-                        <h2>APP móvil para recolección</h2>
+                        <h2>Software PDFAutofiller</h2>
                         <div class="modal-body">
-                            <img src="img/alq.jpg" alt="Descripción de la imagen" class="modal-image">
-                            <p>Esta APP fue diseñada con Flutter,<br/>
-                            fue diseñada para la empresa Alqueria,<br/>
-                            y la idea era de llevar una base de datos
-                            del ganado por finca.</p>
+                            <img src="img/pdfill.png" alt="Descripción de la imagen" class="modal-image">
+                            <p>Este es un software que lee el contenido de un archivo PDF, detectando los campos de tipo formulario para desplegar una interfaz grafica
+                                <br/>
+                                que muestra de una manera mas sencilla y agradable los campos existentes del formulario en el PDF. Al mismo tiempo es capaz de almacenar en un archivo json el historico de datos ingresados,
+                                <br/>
+                                dando asi la opcion al usuario de llenar los campos de manera automatica, evitando el tipeo de teclas y agilizando la tarea de llenado correspondiente a cada archivo.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="trabajo" onclick="openModal('modal3')">
                     <div class="image-container">
-                        <img src="img/term.jpg" alt="Trabajo 3">
+                        <img src="img/pymonitor.png" alt="Trabajo 3">
                     </div>
                     <div class="descripcion">
-                        <h4><b>Termómetro digital</b></h4>
-                        <p>Diseño y creación de un termometro digital</p>
-                           infrarrojo sin contacto.
+                        <h4><b>Monitor y purificador de aire inteligente</b></h4>
+                        <p>Diseño y creación de un dispositivo para monitorear la calidad del aire y purificarlo mediante diferentes etapas.</p>
                     </div>
+                    <button class="ver-mas-btn">Click para ver más</button>
                 </div>
                 <!-- Modal para el Proyecto 3 -->
                 <div id="modal3" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal3')">&times;</span>
-                        <h2>Termómetro digital</h2>
+                        <h2>Dispositivo PyMonitor</h2>
                         <div class="modal-body">
-                            <img src="img/term.jpg" alt="Descripción de la imagen" class="modal-image">
-                            <p>Este termómetro digital infrarrojo sin contacto,<br/>
-                            fue diseñado para la empresa Smile Tecnología y
-                            Servicios, con el propósito de medir la
-                            fiebre en las personas durante la pandemia 2020.</p>
+                            <video controls class="modal-video" autoplay loop>
+                                <source src="img/PyMonitor.mp4" type="video/mp4">
+                                Tu navegador no soporta la etiqueta de video.
+                            </video>
+                            <p>El dispositivo se basa en una Raspberry Pi 4 que utiliza una serie de sensores para medir varios parámetros del aire.
+                                <br/>
+                                Los fenomenos naturales que detecta el dispositivo serian la temperatura y la humedad, la cantidad de gas CO2 en el ambiente y
+                                la clasificación y cuantización de material particulado en el aire;
+                                Asi mismo este se encarga de recolectar y almacenar la información de estos sensores diariamente.
+                                <br/>
+                                Un aspecto innovador de este proyecto es la capacidad de generar un informe sobre la calidad del aire.
+                                Al hacer clic en un botón en la plataforma web de Flask, se activa un script de Python que utiliza un algoritmo de regresión multiple con IA
+                                para analizar los datos y generar un informe de la calidad del aire en un archivo PDF.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -408,6 +426,7 @@
                         <h4><b>Software de análisis de datos</b></h4>
                         <p>Diseño de software de análisis y automatización con Python</p>
                     </div>
+                    <button class="ver-mas-btn">Click para ver más</button>
                 </div>
                 <!-- Modal para el Proyecto 1 -->
                 <div id="modal4" class="modal">
@@ -432,6 +451,7 @@
                         <h4><b>APP móvil para recolección</b></h4>
                         <p>Aplicación movil Android realizada con Flutter y Dart</p>
                     </div>
+                    <button class="ver-mas-btn">Click para ver más</button>
                 </div>
                 <!-- Modal para el Proyecto 2 -->
                 <div id="modal5" class="modal">
@@ -440,10 +460,12 @@
                         <h2>APP móvil para recolección</h2>
                         <div class="modal-body">
                             <img src="img/alq.jpg" alt="Descripción de la imagen" class="modal-image">
-                            <p>Esta APP fue diseñada con Flutter,<br/>
-                            fue diseñada para la empresa Alqueria,<br/>
-                            y la idea era de llevar una base de datos
-                            del ganado por finca.</p>
+                            <p>Esta APP fue diseñada con Flutter y Dart, y fue diseñada para la empresa Alqueria,
+                                <br/>
+                                su funcionamiento es simple y se enfoca en llevar una base de datos del ganado por finca y la informacion de los distribuidores de materia prima externos,
+                                <br/>
+                                donde los ruteros de la compañia pueden registrar e interactuar con la información de los distribuidores finqueros de manera más ágil.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -457,6 +479,7 @@
                         <p>Diseño y creación de un termometro digital</p>
                         infrarrojo sin contacto.
                     </div>
+                    <button class="ver-mas-btn">Click para ver más</button>
                 </div>
                 <!-- Modal para el Proyecto 3 -->
                 <div id="modal6" class="modal">

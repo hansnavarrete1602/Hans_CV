@@ -18,6 +18,7 @@ html{
 
 .titulo,
 #service,
+.servicio,
 #skills,
 #jobs,
 #about,
@@ -548,7 +549,7 @@ img{
     text-decoration: underline; /* Subrayado al pasar el ratón */
 }
 
-
+/*
 .portfolio {
     display: flex;
     overflow-x: scroll;
@@ -556,6 +557,7 @@ img{
     -webkit-overflow-scrolling: touch;
     margin-bottom: 20px;
 }
+
 .trabajo {
     scroll-snap-align: start;
     flex: 0 0 auto;
@@ -570,6 +572,53 @@ img{
 .trabajo:hover {
     box-shadow: 0 8px 16px 0 var(--secundario);
 }
+*/
+.portfolio {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
+.trabajo {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative; /* Ensure the button is positioned correctly */
+}
+
+.trabajo:hover {
+    box-shadow: 0 8px 16px 0 var(--secundario);
+}
+
+.trabajo .ver-mas-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--secundario);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.trabajo .ver-mas-btn:hover {
+    background-color: darken(var(--secundario), 10%);
+}
+
 #jobs .trabajo{
     cursor: pointer;
 }
@@ -593,7 +642,7 @@ img{
     font-size: 1.2em;
 }
 .descripcion p {
-    margin: 1rem 0 0 0;
+    margin: 0.5rem 0 0 0;
     font-size: 0.9em;
     color: #555;
 }
@@ -628,7 +677,14 @@ img{
     gap: 50px;
 }
 .modal-body img.modal-image {
-    max-width: 200px;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.modal-video {
+    /*width: 100%;*/
+    max-width: 400px; /* Adjust the max-width as needed */
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
@@ -636,8 +692,13 @@ img{
 .modal-body p {
     flex: 1;
     text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 1rem; /* Add padding around the text */
+    color: #333; /* Change text color for better contrast */
+    background-color: #f9f9f9; /* Add a light background color */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .close {
     color: #aaa;
